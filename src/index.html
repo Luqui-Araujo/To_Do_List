@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To do</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="widht=device-widht, initial scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!--Div Container-->
+    <div class="toDoContainer">
+      <header>
+        <h1>Lista To-Do</h1>
+      </header>
+      <form id="toDoForm">
+        <p>Adicionar tarefa:</p>
+        <div class="formControl">
+          <input type="text" id="toDoInput" placeholder="Adicione aqui" />
+          <button type="submit">
+            <i class="fa-thin fa-plus"></i>
+          </button>
+        </div>
+      </form>
+
+      <!--Edição da tarefa "hiden"-->
+      <form id="editForm" class="hide">
+        <p>Edite a tarefa</p>
+        <div class="formControl">
+          <input type="text" id="editInput" />
+          <button type="submit">
+            <i class="fa-solid fa-check-double"></i>
+          </button>
+        </div>
+        <button id="editBtn">Cancelar</button>
+      </form>
+
+      <!--Pesquisa-->
+      <div class="toolBar">
+        <div id="search">
+          <h4>Pesquisar</h4>
+          <form>
+            <input type="text" id="searchInput" placeholder="Buscar" />
+            <button id="eraseButton">
+              <i class="fa-solid fa-delete-left"></i>
+            </button>
+          </form>
+        </div>
+        <div id="filter">
+          <!--Filtragem-->
+          <h4>Filtrar:</h4>
+          <select id="filterSelect">
+            <option>Todos</option>
+            <option>Prontos</option>
+            <option>Pendentes</option>
+          </select>
+        </div>
+      </div>
+
+      <!--Lista de afazeres-->
+      <div id="toDoList">
+        <div class="toDo done">
+          <h3>Estou fazendo alguma coisa...</h3>
+          <button class="finishToDo">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="editToDo">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button class="removeToDo">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="toDo">
+          <h3>Teste</h3>
+          <button class="finishToDo">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="editToDo">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button class="removeToDo">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Fonte scripts JavaScript-->
+    <script src="script.js"></script>
+  </body>
+</html>
